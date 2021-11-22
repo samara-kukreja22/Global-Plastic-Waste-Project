@@ -9,7 +9,7 @@ let inadequateWaste_csv = fs.readFileSync('data/piChart-inadequate.csv', 'utf8')
 let mismanagedWaste_csv = fs.readFileSync('data/piChart-GlobalMismanaged.csv', 'utf8'); */
 
 let totalPlasticData = totalPlasticData_csv.split("\n");//is an array, each row is a different element
-
+totalPlasticData = totalPlasticData.slice(1,12);
 /*
 let totalWasteGeneration = macroWasteGen_csv.split("\n");//is an array, each row is a different element
 let perCapitaWaste = perCapita_csv.split("\n");
@@ -27,12 +27,12 @@ totalWasteGeneration.forEach(function(countries) {
 totalPlasticData.forEach(function(countries) {
   let country_info = countries.split(',');
   let country = {};
-  country['entity'] = country_info[0];
-  country['year'] = country_info[1];
-  country['pwg'] = country_info[2];
-  country['mismanaged'] = country_info[3];
-  country['inadequate'] = country_info[4];
-  country['perCapita'] = country_info[5];
+  country['entity'] = country_info[0].trim();
+  country['year'] = country_info[1].trim();
+  country['pwg'] = country_info[2].trim();
+  country['mismanaged'] = country_info[3].trim();
+  country['inadequate'] = country_info[4].trim();
+  country['perCapita'] = country_info[5].trim();
 
   plasticData.push(country);
 });

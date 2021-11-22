@@ -1,19 +1,11 @@
 [
   {
-    "entity": "Entity",
-    "year": "Year",
-    "pwg": "\"Plastic waste generation (tonnes",
-    "mismanaged": " total)\"",
-    "inadequate": "Mismanaged waste (% global total)",
-    "perCapita": "Share of plastic inadequately managed nationally"
-  },
-  {
     "entity": "Australia",
     "year": "2010",
     "pwg": "900658",
     "mismanaged": "0.0436",
     "inadequate": "0",
-    "perCapita": "0.112\r"
+    "perCapita": "0.112"
   },
   {
     "entity": "Brazil",
@@ -21,7 +13,7 @@
     "pwg": "11852055",
     "mismanaged": "1.4804",
     "inadequate": "9",
-    "perCapita": "0.165\r"
+    "perCapita": "0.165"
   },
   {
     "entity": "China",
@@ -29,7 +21,7 @@
     "pwg": "59079741",
     "mismanaged": "27.6966",
     "inadequate": "74",
-    "perCapita": "0.121\r"
+    "perCapita": "0.121"
   },
   {
     "entity": "Egypt",
@@ -37,7 +29,7 @@
     "pwg": "5464471",
     "mismanaged": "3.0367",
     "inadequate": "67",
-    "perCapita": "0.178\r"
+    "perCapita": "0.178"
   },
   {
     "entity": "Germany",
@@ -45,7 +37,7 @@
     "pwg": "14476561",
     "mismanaged": "0.0981",
     "inadequate": "0",
-    "perCapita": "0.485\r"
+    "perCapita": "0.485"
   },
   {
     "entity": "Indonesia",
@@ -53,7 +45,7 @@
     "pwg": "5045714",
     "mismanaged": "10.1019",
     "inadequate": "81",
-    "perCapita": "0.057\r"
+    "perCapita": "0.057"
   },
   {
     "entity": "Nigeria",
@@ -61,7 +53,7 @@
     "pwg": "5961750",
     "mismanaged": "2.674",
     "inadequate": "81",
-    "perCapita": "0.103\r"
+    "perCapita": "0.103"
   },
   {
     "entity": "Pakistan",
@@ -69,7 +61,7 @@
     "pwg": "6412210",
     "mismanaged": "1.5089",
     "inadequate": "86",
-    "perCapita": "0.103\r"
+    "perCapita": "0.103"
   },
   {
     "entity": "Russia",
@@ -77,7 +69,7 @@
     "pwg": "5839685",
     "mismanaged": "0.2536",
     "inadequate": "16",
-    "perCapita": "0.112\r"
+    "perCapita": "0.112"
   },
   {
     "entity": "South Africa",
@@ -85,7 +77,7 @@
     "pwg": "4465798",
     "mismanaged": "1.9784",
     "inadequate": "54",
-    "perCapita": "0.24\r"
+    "perCapita": "0.24"
   },
   {
     "entity": "Turkey",
@@ -93,14 +85,6 @@
     "pwg": "5596657",
     "mismanaged": "1.526",
     "inadequate": "16",
-    "perCapita": "0.212\r"
-  },
-  {
-    "entity": "United States",
-    "year": "2010",
-    "pwg": "37825550",
-    "mismanaged": "0.8649",
-    "inadequate": "0",
-    "perCapita": "0.335"
+    "perCapita": "0.212"
   }
 ]
