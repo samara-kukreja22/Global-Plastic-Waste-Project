@@ -20,5 +20,5 @@ for(let object of parsedObject){
       filename: __dirname + '/views/micro.ejs',
       data: object
     });
-  fs.writeFileSync('build/'+ object.entity +'.html', microHTML, 'utf8')
+  fs.writeFileSync('build/'+ object.entity +'.html', microHTML, 'utf8');
 }
