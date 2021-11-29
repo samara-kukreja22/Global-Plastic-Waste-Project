@@ -8,13 +8,12 @@
   <meta name="description" content="A visual representation of the Global Plastic Waste">
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>
-    <h1>Plastic Waste by Country</h1>
-  </header>
-  <section id="country-table">
+  <%- include ('global/navbar.ejs'); %>
     <table>
       <tr>
         <th>Entity</th>
@@ -24,21 +23,17 @@
         <th>Inadequate</th>
         <th>perCapita</th>
       </tr>
-      <% for(let i=1; i<data.length; i++){ %>
       <tr>
-        <td><%= data[i].entity %></td>
-        <td><%= data[i].year %></td>
-        <td><%= data[i].pwg %></td>
-        <td><%= data[i].mismanaged %></td>
-        <td><%= data[i].inadequate %></td>
-        <td><%= data[i].perCapita %></td>
+        <td><%= data.entity %></td>
+        <td><%= data.year %></td>
+        <td><%= data.pwg %></td>
+        <td><%= data.mismanaged %></td>
+        <td><%= data.inadequate %></td>
+        <td><%= data.perCapita %></td>
       </tr>
-      <%}%>
     </table>
-  </section>
 
   <%- include ('global/footer');  %>
-
 </body>
 
 </html>
