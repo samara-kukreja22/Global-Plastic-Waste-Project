@@ -1,0 +1,26 @@
+{
+  "name": "global-plastic-waste-project",
+  "version": "1.0.0",
+  "description": "https://ourworldindata.org/plastic-pollution#total-plastic-waste-by-country",
+  "main": "EJSgenerator.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "fs": "^0.0.1-security",
+    "jest": "^27.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samara-kukreja22/Global-Plastic-Waste-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samara-kukreja22/Global-Plastic-Waste-Project/issues"
+  },
+  "homepage": "https://github.com/samara-kukreja22/Global-Plastic-Waste-Project#readme"
+}
