@@ -20,7 +20,5 @@ for(let object of data){
       filename: __dirname + '/views/micro.ejs',
       data: object
     });
-    console.log("looping");
-    console.log(object);
   fs.writeFileSync('build/'+ object.entity +'.html', microHTML, 'utf8');
 }
