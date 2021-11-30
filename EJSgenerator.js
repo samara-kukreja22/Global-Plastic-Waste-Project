@@ -8,7 +8,7 @@ let data = JSON.parse(country_info);
 //console.log(country_info);
 //console.log(JSON.parse(country_info)[1]);
 
-let index_html = ejs.render(index_template, {//renders the macropage
+let index_html = ejs.render(index_template, {//renders thbe macropage
     filename: __dirname + '/views/index.ejs',
     data: JSON.parse(country_info)
   });
@@ -20,7 +20,7 @@ for(let object of data){
       filename: __dirname + '/views/micro.ejs',
       data: object
     });
-    //console.log(1);
-    //console.log(object);
+    console.log("looping");
+    console.log(object);
   fs.writeFileSync('build/'+ object.entity +'.html', microHTML, 'utf8');
 }
