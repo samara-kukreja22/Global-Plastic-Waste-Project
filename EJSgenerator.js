@@ -1,12 +1,12 @@
 const fs = require('fs');
 const ejs = require('ejs');
 
-let country_info = fs.readFileSync('data/plasticData.json', 'utf8');//read JSON object and sotre it here
+let country_info = fs.readFileSync('data/plasticData.json', 'utf8');//read JSON string (array of objects) and store it here
 let index_template = fs.readFileSync('views/index.ejs', 'utf8');
 let micro_template = fs.readFileSync('views/micro.ejs', 'utf8');
 
-
-let data = JSON.parse(country_info);//data object
+console.log(country_info);
+let data = JSON.parse(country_info);//convert JSON string into a JS object
 
 let index_html = ejs.render(index_template, {//renders the macropage
     filename: __dirname + '/views/index.ejs',

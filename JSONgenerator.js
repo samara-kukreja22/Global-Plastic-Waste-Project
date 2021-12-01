@@ -9,7 +9,7 @@ let inadequateWaste_csv = fs.readFileSync('data/piChart-inadequate.csv', 'utf8')
 let mismanagedWaste_csv = fs.readFileSync('data/piChart-GlobalMismanaged.csv', 'utf8'); */
 
 let totalPlasticData = totalPlasticData_csv.split("\n");//is an array, each row is a different element
-
+//console.log(totalPlasticData);
 totalPlasticData = totalPlasticData.slice(1,13);
 
 totalPlasticData.forEach(function(countries) {
