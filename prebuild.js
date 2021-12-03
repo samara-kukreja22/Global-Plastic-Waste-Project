@@ -4,5 +4,5 @@ let readJSON = fs.readFileSync('data/plasticData.json', 'utf8');
 let data = JSON.parse(readJSON);
 
 for(let object of data){
-  fs.unlink('build/' + object.entity +'.html');
+  fs.unlinkSync('build/' + object.entity +'.html');
 }
