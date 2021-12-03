@@ -8,7 +8,9 @@
     "fs": "^0.0.1-security",
     "jest": "^27.4.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+
+  },
   "scripts": {
     "prebuild": "node prebuild.js",
     "build": "node EJSgenerator.js",
