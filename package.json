@@ -11,7 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "prebuild": "node prebuild.js",
-    "build": "node build.js",
+    "build": "node EJSgenerator.js",
     "postbuild": "open http://localhost:3000 && node server.js",
     "deploy": "npm run publish && npm run production:start",
   },
