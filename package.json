@@ -10,8 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "prebuild": " ",
-    "build": " ",
+    "prebuild": "",
+    "build": "",
     "postbuild": "open http://localhost:3000 && node server.js",
     "deploy": "npm run publish && npm run production:start",
   },
