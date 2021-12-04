@@ -10,6 +10,8 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
+  	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 </head>
 
 <body>
@@ -39,8 +41,32 @@
       <%}%>
     </table>
   </section>
-
+  <div id = "pwgMap"></div>
   <%- include ('global/footer');  %>
+
+  <script>
+
+  let data = [{
+        type: 'choropleth',
+        locationmode: 'country names',
+        locations: [<% for(let i=1; i<data.length; i++){ %>
+                    "<%= data[i].entity %>", <%}%>],
+        z: [<% for(let i=1; i<data.length; i++){ %>
+                    <%= data[i].pwg %>, <%}%>],
+        text: [<% for(let i=1; i<data.length; i++){ %>
+                    "<%= data[i].entity %>", <%}%>],
+        autocolorscale: true
+    }];
+    var layout = {
+     title: 'Global Plastic Waste Generation<br>per country',
+     geo: {
+         projection: {
+             type: 'robinson'
+         }
+     }
+   };
+   Plotly.newPlot("pwgMap", data, layout, {showLink: false});
+  </script>
 
 </body>
 
