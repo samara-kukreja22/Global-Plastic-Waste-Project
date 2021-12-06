@@ -5,19 +5,17 @@
   "main": "EJSgenerator.js",
   "dependencies": {
     "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "jest": "^27.4.3"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "scripts": {
     "prebuild": "node prebuild.js",
     "build": "node EJSgenerator.js",
     "postbuild": "open http://localhost:3000 && node server.js",
     "deploy": "npm run publish && npm run production:start"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samara-kukreja22/Global-Plastic-Waste-Project.git"
