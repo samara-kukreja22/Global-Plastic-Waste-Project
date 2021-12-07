@@ -17,6 +17,11 @@
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% for(var i=0; i<data.length; i++) {%>
+                <li><a class="dropdown-item" href= "<%=data[i].entity%>.html"><%= data[i].entity %></a></li>
+            <% } %>
+
+            <!--
             <li><a class="dropdown-item" href="Australia.html">Australia</a></li>
             <li><a class="dropdown-item" href="Brazil.html">Brazil</a></li>
             <li><a class="dropdown-item" href="China.html">China</a></li>
@@ -29,6 +34,8 @@
             <li><a class="dropdown-item" href="South Africa.html">South Africa</a></li>
             <li><a class="dropdown-item" href="Turkey.html">Turkey</a></li>
             <li><a class="dropdown-item" href="United States.html">United States</a></li>
+            -->
+            
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="About.html">About</a></li>
             <li><a class="dropdown-item" href="index.html">Home</a></li>

@@ -13,78 +13,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="about.html">About</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            
-                <li><a class="dropdown-item" href= "Australia.html">Australia</a></li>
-            
-                <li><a class="dropdown-item" href= "Brazil.html">Brazil</a></li>
-            
-                <li><a class="dropdown-item" href= "China.html">China</a></li>
-            
-                <li><a class="dropdown-item" href= "Egypt.html">Egypt</a></li>
-            
-                <li><a class="dropdown-item" href= "Germany.html">Germany</a></li>
-            
-                <li><a class="dropdown-item" href= "Indonesia.html">Indonesia</a></li>
-            
-                <li><a class="dropdown-item" href= "Nigeria.html">Nigeria</a></li>
-            
-                <li><a class="dropdown-item" href= "Pakistan.html">Pakistan</a></li>
-            
-                <li><a class="dropdown-item" href= "Russia.html">Russia</a></li>
-            
-                <li><a class="dropdown-item" href= "South Africa.html">South Africa</a></li>
-            
-                <li><a class="dropdown-item" href= "Turkey.html">Turkey</a></li>
-            
-                <li><a class="dropdown-item" href= "United States.html">United States</a></li>
-            
-
-            <!--
-            <li><a class="dropdown-item" href="Australia.html">Australia</a></li>
-            <li><a class="dropdown-item" href="Brazil.html">Brazil</a></li>
-            <li><a class="dropdown-item" href="China.html">China</a></li>
-            <li><a class="dropdown-item" href="Egypt.html">Egypt</a></li>
-            <li><a class="dropdown-item" href="Germany.html">Germany</a></li>
-            <li><a class="dropdown-item" href="Indonesia.html">Indonesia</a></li>
-            <li><a class="dropdown-item" href="Nigeria.html">Nigeria</a></li>
-            <li><a class="dropdown-item" href="Pakistan.html">Pakistan</a></li>
-            <li><a class="dropdown-item" href="Russia.html">Russia</a></li>
-            <li><a class="dropdown-item" href="South Africa.html">South Africa</a></li>
-            <li><a class="dropdown-item" href="Turkey.html">Turkey</a></li>
-            <li><a class="dropdown-item" href="United States.html">United States</a></li>
-            -->
-            
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="About.html">About</a></li>
-            <li><a class="dropdown-item" href="index.html">Home</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+    <%- include ('global/navbar.ejs'); %>
   <header>
     <h1>Global Plastic Waste Infographic</h1>
 
@@ -197,10 +126,7 @@
         <li>While we will work on the data processing together, Erin will focus on the macrosummary while Samara will focus on the microsummary pages.
       </ul>
     </section>
-    <footer>
-  This data tells us the country, the year the data was collected, how many tons the country generates per year, what percentage of the waste do they mismanage, share of global plastic waste that is inadequately handled, and how much waste is generated per person
-</footer>
-
+    <%- include ('global/footer');  %>
 </body>
 
 </html>
