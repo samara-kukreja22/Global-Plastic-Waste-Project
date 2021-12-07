@@ -17,7 +17,8 @@ fs.writeFileSync('build/index.html', index_html, 'utf8');//save the file in the 
 for(let object of data){//going through the values of data
   let microHTML = ejs.render(micro_template, {//renders the file
       filename: __dirname + '/views/micro.ejs',
-      data: object
+      data: object,
+      all_data: data
     });
   fs.writeFileSync('build/'+ object.entity +'.html', microHTML, 'utf8');
 }

@@ -34,19 +34,60 @@
       </tr>
     </table>
     <div id = "pieChart"></div>
+    <div id = "mismanagedChart"></div>
+    <div id = "perCapitaChart"></div>
   <%- include ('global/footer');  %>
   <script>
-    //chart creation
-    let data = [{values: [<%= data.mismanaged %>,<%= data.inadequate %>],
-                labels: ["mismanaged","inadequate"],
+    //inadequateChart
+    let totalWaste = <%= data.pwg %>;
+    let inadequate = <%= data.inadequate %>/100;//bc this is a percentage
+    let inadequateWaste = totalWaste * inadequate;
+    let adequateWaste = totalWaste - inadequateWaste;
+    let data = [{values: [inadequateWaste, adequateWaste],
+                labels: ["inadequate","adequate"],
                 type: "pie"
     }];
     let layout = {
+      title: 'Inadequate Waste<br>per country measured in tons',
       height: 400,
       width: 500
     };
     Plotly.newPlot('pieChart', data, layout);
-
+    //mismanagedChart
+    let globalWaste = totalWaste/(<%= data.mismanaged %>/100);
+    data = [{values: [globalWaste - totalWaste, totalWaste],
+                labels: ["other mismanaged waste", "share of mismanaged waste"],
+                type: "pie"
+    }];
+    layout = {
+      title: 'Share of global Mismanaged Waste<br>per country',
+      height: 400,
+      width: 500
+    };
+    Plotly.newPlot('mismanagedChart', data, layout);
+    //barChart
+    let labels = [<% for(let i=1; i<all_data.length; i++){ %>
+                "<%= all_data[i].entity %>", <%}%>];
+    let values = [<% for(let i=1; i<all_data.length; i++){ %>
+                <%= all_data[i].perCapita %>, <%}%>];
+    let colors = [<% for(let i=1; i<all_data.length; i++){ %>
+                  '<%=
+                  all_data[i].entity == data.entity ? "rgba(222,45,38,0.8)": "rgba(204,204,204,1)";
+                  %>', <%}%>
+    ];
+    //go through all data and put into lists
+      let data1 = [{
+      x: labels,
+      y: values,
+      marker:{
+        color: colors
+      },
+      type: 'bar'
+    }];
+    layout = {
+      title: 'plastic generated per Capita'
+    };
+    Plotly.newPlot('perCapitaChart', data1, layout);
   </script>
 
 </body>
