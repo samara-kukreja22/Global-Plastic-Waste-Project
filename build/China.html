@@ -33,33 +33,6 @@
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            
-                <li><a class="dropdown-item" href= "Australia.html">Australia</a></li>
-            
-                <li><a class="dropdown-item" href= "Brazil.html">Brazil</a></li>
-            
-                <li><a class="dropdown-item" href= "China.html">China</a></li>
-            
-                <li><a class="dropdown-item" href= "Egypt.html">Egypt</a></li>
-            
-                <li><a class="dropdown-item" href= "Germany.html">Germany</a></li>
-            
-                <li><a class="dropdown-item" href= "Indonesia.html">Indonesia</a></li>
-            
-                <li><a class="dropdown-item" href= "Nigeria.html">Nigeria</a></li>
-            
-                <li><a class="dropdown-item" href= "Pakistan.html">Pakistan</a></li>
-            
-                <li><a class="dropdown-item" href= "Russia.html">Russia</a></li>
-            
-                <li><a class="dropdown-item" href= "South Africa.html">South Africa</a></li>
-            
-                <li><a class="dropdown-item" href= "Turkey.html">Turkey</a></li>
-            
-                <li><a class="dropdown-item" href= "United States.html">United States</a></li>
-            
-
-            <!--
             <li><a class="dropdown-item" href="Australia.html">Australia</a></li>
             <li><a class="dropdown-item" href="Brazil.html">Brazil</a></li>
             <li><a class="dropdown-item" href="China.html">China</a></li>
@@ -72,8 +45,6 @@
             <li><a class="dropdown-item" href="South Africa.html">South Africa</a></li>
             <li><a class="dropdown-item" href="Turkey.html">Turkey</a></li>
             <li><a class="dropdown-item" href="United States.html">United States</a></li>
-            -->
-            
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="About.html">About</a></li>
             <li><a class="dropdown-item" href="index.html">Home</a></li>
@@ -111,7 +82,7 @@
 
   <script>
     //chart creation
-    let data2 = [{values: [27.6966,74],
+    let data = [{values: [27.6966,74],
                 labels: ["mismanaged","inadequate"],
                 type: "pie"
     }];
@@ -119,7 +90,7 @@
       height: 400,
       width: 500
     };
-    Plotly.newPlot('pieChart', data2, layout);
+    Plotly.newPlot('pieChart', data, layout);
 
   </script>
 

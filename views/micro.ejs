@@ -25,19 +25,19 @@
         <th>perCapita</th>
       </tr>
       <tr>
-        <td><%= data2.entity %></td>
-        <td><%= data2.year %></td>
-        <td><%= data2.pwg %></td>
-        <td><%= data2.mismanaged %></td>
-        <td><%= data2.inadequate %></td>
-        <td><%= data2.perCapita %></td>
+        <td><%= data.entity %></td>
+        <td><%= data.year %></td>
+        <td><%= data.pwg %></td>
+        <td><%= data.mismanaged %></td>
+        <td><%= data.inadequate %></td>
+        <td><%= data.perCapita %></td>
       </tr>
     </table>
     <div id = "pieChart"></div>
   <%- include ('global/footer');  %>
   <script>
     //chart creation
-    let data2 = [{values: [<%= data2.mismanaged %>,<%= data2.inadequate %>],
+    let data = [{values: [<%= data.mismanaged %>,<%= data.inadequate %>],
                 labels: ["mismanaged","inadequate"],
                 type: "pie"
     }];
@@ -45,7 +45,7 @@
       height: 400,
       width: 500
     };
-    Plotly.newPlot('pieChart', data2, layout);
+    Plotly.newPlot('pieChart', data, layout);
 
   </script>
 
