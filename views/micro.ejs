@@ -25,12 +25,12 @@
         <th>perCapita</th>
       </tr>
       <tr>
-        <td><%= data.entity %></td>
-        <td><%= data.year %></td>
-        <td><%= data.pwg %></td>
-        <td><%= data.mismanaged %></td>
-        <td><%= data.inadequate %></td>
-        <td><%= data.perCapita %></td>
+        <td><%= data2.entity %></td>
+        <td><%= data2.year %></td>
+        <td><%= data2.pwg %></td>
+        <td><%= data2.mismanaged %></td>
+        <td><%= data2.inadequate %></td>
+        <td><%= data2.perCapita %></td>
       </tr>
     </table>
     <div id = "pieChart"></div>
@@ -39,8 +39,8 @@
   <%- include ('global/footer');  %>
   <script>
     //inadequateChart
-    let totalWaste = <%= data.pwg %>;
-    let inadequate = <%= data.inadequate %>/100;//bc this is a percentage
+    let totalWaste = <%= data2.pwg %>;
+    let inadequate = <%= data2.inadequate %>/100;//bc this is a percentage
     let inadequateWaste = totalWaste * inadequate;
     let adequateWaste = totalWaste - inadequateWaste;
     let data = [{values: [inadequateWaste, adequateWaste],
@@ -54,13 +54,13 @@
     };
     Plotly.newPlot('pieChart', data, layout);
     //mismanagedChart
-    let globalWaste = totalWaste/(<%= data.mismanaged %>/100);
+    let globalWaste = totalWaste/(<%= data2.mismanaged %>/100);
     data = [{values: [globalWaste - totalWaste, totalWaste],
                 labels: ["other mismanaged waste", "share of mismanaged waste"],
                 type: "pie"
     }];
     layout = {
-      title: 'Share of global Mismanaged Waste<br>per country',
+      title: 'Share of Global Mismanaged Waste<br>per country',
       height: 400,
       width: 500
     };
@@ -72,7 +72,7 @@
                 <%= all_data[i].perCapita %>, <%}%>];
     let colors = [<% for(let i=1; i<all_data.length; i++){ %>
                   '<%=
-                  all_data[i].entity == data.entity ? "rgba(222,45,38,0.8)": "rgba(204,204,204,1)";
+                  all_data[i].entity == data2.entity ? "rgba(222,45,38,0.8)": "rgba(204,204,204,1)";
                   %>', <%}%>
     ];
     //go through all data and put into lists
@@ -85,7 +85,7 @@
       type: 'bar'
     }];
     layout = {
-      title: 'plastic generated per Capita'
+      title: 'Plastic Waste Generated per Capita'
     };
     Plotly.newPlot('perCapitaChart', data1, layout);
   </script>
