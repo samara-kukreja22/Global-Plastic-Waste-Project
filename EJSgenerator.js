@@ -6,6 +6,8 @@ let index_template = fs.readFileSync('views/index.ejs', 'utf8');
 let micro_template = fs.readFileSync('views/micro.ejs', 'utf8');
 let about_template = fs.readFileSync('views/about.ejs', 'utf8');
 
+let about_template = fs.readFileSync('views/about.ejs', 'utf8');
+
 let data = JSON.parse(country_info);//convert JSON string into a JS object
 
 let index_html = ejs.render(index_template, {//renders the macropage
