@@ -57,7 +57,7 @@
     //mismanagedChart
     let globalWaste = totalWaste/(<%= data2.mismanaged %>/100);
     data = [{values: [globalWaste - totalWaste, totalWaste],
-                labels: ["other mismanaged waste", "share of mismanaged waste"],
+                labels: ["Global mismanaged waste", "<%= data2.entity %>'s share of global waste"],
                 type: "pie"
     }];
     layout = {
@@ -86,7 +86,7 @@
       type: 'bar'
     }];
     layout = {
-      title: 'Plastic Waste Generated per Capita'
+      title: 'Plastic Waste Generated per Capita<br>per person per day in kilograms'
     };
     Plotly.newPlot('perCapitaChart', data1, layout);
   </script>
@@ -94,7 +94,11 @@
     <h2>Summary:</h2>
     <ul>
       <p>
-        This page shows how much of <%= data2.entity %>'s waste is inadequate, their global share of mismanaged waste, and how much plastic waste is generated per Capita.
+        This page shows displays <%= data2.entity %>'s plastic waste and their ways of disposing waste.
+        <%= data2.inadequate %>% of <%= data2.entity %>'s  waste is inadequately disposed.
+        <%= data2.mismanaged %>% is <%= data2.entity %>'s share of the global mismanaged waste.
+        <%= data2.perCapita %> is how much plastic each person per day in <%= data2.entity %> generates in kilograms.
+
       </p>
     </ul>
   </section>
