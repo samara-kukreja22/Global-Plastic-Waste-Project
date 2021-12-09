@@ -37,7 +37,6 @@
     <div id = "pieChart"></div>
     <div id = "mismanagedChart"></div>
     <div id = "perCapitaChart"></div>
-  <%- include ('global/footer');  %>
   <script>
     //inadequateChart
     let totalWaste = <%= data2.pwg %>;
@@ -90,7 +89,15 @@
     };
     Plotly.newPlot('perCapitaChart', data1, layout);
   </script>
-
+  <section id="summary">
+    <h2>Summary:</h2>
+    <ul>
+      <p>
+        This page shows how much of <%= data2.entity %>'s waste is inadequate, their global share of mismanaged waste, and how much plastic waste is generated per Capita.
+      </p>
+    </ul>
+  </section>
+  <%- include ('global/footer');  %>
 </body>
 
 </html>
