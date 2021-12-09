@@ -19,6 +19,14 @@
   <header>
     <h1>Global Plastic Waste</h1>
   </header>
+  <section id="summary">
+    <h2>Summary:</h2>
+    <ul>
+      <p>
+        In our project, we are exploring the total global plastic waste, the amount of inadequate waste, share of global mismanaged waste, and plastic waste generated per Capita for certain countries.
+      </p>
+    </ul>
+  </section>
   <section id="country-table">
     <table>
       <tr>
@@ -42,7 +50,6 @@
     </table>
   </section>
   <div id = "pwgMap"></div>
-  <%- include ('global/footer');  %>
 
   <script>
 //changing
@@ -67,7 +74,15 @@
    };
    Plotly.newPlot("pwgMap", data, layout, {showLink: false});
   </script>
-
+  <section id="bulletPoints">
+    <h2>Some Interesting Points</h2>
+    <ul>
+      <li>Here we can see China and the US produce the most plastic waste</li>
+      <li>Germany, for us, is pretty surprising considering it is such a small country but it generates so much plastic waste</li>
+      <li>Russia, considering its size, is much less in terms of plastic waste generation but due to its political situation we wonder if the data for Russia is correct</li>
+    </ul>
+  </section>
+<%- include ('global/footer');  %>
 </body>
 
 </html>
