@@ -10,12 +10,13 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <%- include ('global/navbar.ejs'); %>
   <header>
-    <h1>Global Plastic Waste Infographic</h1>
+    <h1>Global Plastic Waste</h1>
 
     <section id="definitions">
       <h2>Definitions:</h2>
@@ -126,6 +127,12 @@
         <li>While we will work on the data processing together, Erin will focus on the macrosummary while Samara will focus on the microsummary pages.
       </ul>
     </section>
+
+    <section id = "lucidChart">
+      <h2>Project Pipeline Flowchart</h2>
+      <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embeddedchart/1031b839-5f07-4563-9457-0a8fdc978dca" id="MlDzTiOEe1W4"></iframe></div>
+    </section>
+
     <%- include ('global/footer');  %>
 </body>
 
