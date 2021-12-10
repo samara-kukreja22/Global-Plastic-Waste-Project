@@ -45,7 +45,7 @@
     let inadequateWaste = totalWaste * inadequate;
     let adequateWaste = totalWaste - inadequateWaste;
     let data = [{values: [inadequateWaste, adequateWaste],
-                labels: ["Inadequately managed waste","Adequately managed waste"],
+                labels: ["Inadequately<br>managed waste","Adequately<br>managed waste"],
                 type: "pie"
     }];
     let layout = {
@@ -58,7 +58,7 @@
     //mismanagedChart
     let globalWaste = totalWaste/(<%= data2.mismanaged %>/100);
     data = [{values: [globalWaste - totalWaste, totalWaste],
-                labels: ["Global mismanaged waste", "<%= data2.entity %>'s<br>share of global mis-<br>managed waste"],
+                labels: ["Global mis-<br>managed waste", "<%= data2.entity %>'s<br>share of global mis-<br>managed waste"],
                 type: "pie"
     }];
     layout = {
