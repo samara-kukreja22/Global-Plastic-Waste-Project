@@ -87,6 +87,8 @@
       type: 'bar'
     }];
     layout = {
+      xaxis: {title: 'Country'},
+      yaxis: {title: 'Amount of Waste per Day in kilograms'},
       title: 'Per capita plastic waste (kg/person/day)'
     };
     Plotly.newPlot('perCapitaChart', data1, layout);
