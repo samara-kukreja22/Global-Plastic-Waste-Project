@@ -1,0 +1,46 @@
+body {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:  #bfbfbf;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #bfbfbf;
+  font-size: 30px;
+}
+
+button {
+  font-size: 12px;
+  border-radius: 6px;
+  border: 2px solid #00cccc;
+  padding: 7px 12px;
+}
+
+button:hover {
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin: auto;
+  width: 75%;
+}
+
+table, th, td {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  padding: 4px;
+  text-align: center;
+}
+
+tr:hover {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e8f5ff;
+}
